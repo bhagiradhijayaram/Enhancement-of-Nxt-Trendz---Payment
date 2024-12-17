@@ -1,0 +1,26 @@
+.cart-summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.order-total-value {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+.order-total-label {
+  color: #616e7c;
+  font-size: 20px;
+}
+.total-items {
+  text-align: left;
+}
+
+.Checkout-button {
+  background-color: #0b69ff;
+  color: #ffffff;
+  width: 220px;
+  padding: 8px;
+  border: none;
+  font-size: 15px;
+}
