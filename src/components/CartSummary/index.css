@@ -1,26 +1,177 @@
-.cart-summary-container {
+/* Full-Screen Background Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Container */
+.popup-container {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Popup Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: darkred;
+}
+
+/* Payment Options */
+.payment-options {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 15px 0;
 }
+
+.payment-options label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.payment-options input[type='radio'] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Order Summary */
+.popup-container h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.popup-container h3 {
+  font-size: 18px;
+  color: #444;
+  margin-top: 10px;
+}
+
+.popup-container p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Confirm Order Button */
+.confirm-order-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.confirm-order-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Success Message */
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Cart Summary Styling */
+.cart-summary-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+
 .order-total-value {
-  font-size: 25px;
-  margin-bottom: 0px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
 }
+
 .order-total-label {
-  color: #616e7c;
-  font-size: 20px;
+  font-size: 18px;
+  color: #555;
 }
+
 .total-items {
-  text-align: left;
+  font-size: 16px;
+  color: #777;
 }
 
 .Checkout-button {
-  background-color: #0b69ff;
-  color: #ffffff;
-  width: 220px;
-  padding: 8px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  font-size: 15px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.Checkout-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 500px) {
+  .popup-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .cart-summary-container {
+    width: 90%;
+  }
 }
